@@ -1,9 +1,6 @@
 #Creates a layer from node:alpine image.
 FROM node:alpine
 
-#Sets an environment variable
-ENV PORT 3000
-
 #Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD commands
 WORKDIR /usr/src/app
 
@@ -24,4 +21,4 @@ RUN npm run build
 EXPOSE 3000
 
 #Allows you to configure a container that will run as an executable
-ENTRYPOINT ["npm", "run"]
+ENTRYPOINT ["npm", "run", "dev"]
